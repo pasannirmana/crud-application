@@ -15,4 +15,9 @@ class UserRepository implements UserServiceInterface
         $newUser->fill($userInputData);
         $newUser->save();
     }
+
+    public function getUser($request): array
+    {
+        return User::all('email','password','name','joined_date')->toArray();
+    }
 }

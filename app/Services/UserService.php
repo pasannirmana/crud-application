@@ -31,4 +31,9 @@ class UserService
 
     }
 
+    public function getUser($request)
+    {
+        return $this -> userServiceInterface -> getUser($request);
+    }
+
 }

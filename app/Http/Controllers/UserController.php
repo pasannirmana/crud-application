@@ -18,9 +18,12 @@ class UserController extends Controller
 
     public function createUser(Request $request)
     {
-
         $this->userService->createUser($request);
+    }
 
+    public function getUser(Request $request)
+    {
+        return $this->userService->getUser($request);
     }
     //
 }

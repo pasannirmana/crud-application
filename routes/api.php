@@ -23,4 +23,5 @@ Route::group([
     'prefix' => 'users'
 ], function (){
     Route::post('/createUser', [UserController::class, 'createUser']);
+    Route::get('/getUser', [UserController::class, 'getUser']);
 });
