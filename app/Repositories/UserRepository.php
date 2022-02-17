@@ -39,4 +39,26 @@ class UserRepository implements UserServiceInterface
     {
         return User::where('id', $userId)->first()->toArray();
     }
+
+    public function updateUser(array $userInputData): string
+    {
+//        dd($userInputData['user_id']);
+
+
+        try {
+
+            $user = User::find($userInputData['user_id']);
+
+            $user->name = $userInputData['name'];
+            $user->password = $userInputData['password'];
+            $user->email = $userInputData['email'];
+            $is_saved = $user->save();
+            if ($is_saved == true){
+                return "Your details updated successfully";
+            }
+        }catch(\Exception $e){
+            return $e->getMessage();
+        }
+
+    }
 }

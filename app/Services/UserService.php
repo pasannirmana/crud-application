@@ -56,4 +56,16 @@ class UserService
         return $this -> userServiceInterface -> getUserById($userId);
     }
 
+    public function updateUser($request):mixed
+    {
+        $userInputData = [
+            'user_id' => $request['user_id'],
+            'email' => $request['email'],
+            'password' => $request['password'],
+            'name' => $request['name'],
+        ];
+
+        return $this -> userServiceInterface ->updateUser($userInputData);
+    }
+
 }

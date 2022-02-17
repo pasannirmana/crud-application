@@ -47,5 +47,10 @@ class UserController extends Controller
     {
         return $this->userService->getUserById($request);
     }
+
+    public function updateUser(Request $request) :mixed
+    {
+      return $this->userService->updateUser($request);
+    }
     //
 }

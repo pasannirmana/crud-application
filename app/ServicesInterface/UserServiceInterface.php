@@ -22,5 +22,7 @@ interface UserServiceInterface
      */
     public function getUserById($userId): mixed;
 
+    public function updateUser(array $userInputData):mixed;
+
 
 }
