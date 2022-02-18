@@ -24,5 +24,7 @@ interface UserServiceInterface
 
     public function updateUser(array $userInputData):mixed;
 
+    public function deleteUser(mixed $userId);
+
 
 }

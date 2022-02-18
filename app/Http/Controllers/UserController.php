@@ -52,5 +52,10 @@ class UserController extends Controller
     {
       return $this->userService->updateUser($request);
     }
+
+    public function deleteUser(Request $request)
+    {
+        return $this->userService->deleteUser($request);
+    }
     //
 }

@@ -68,4 +68,10 @@ class UserService
         return $this -> userServiceInterface ->updateUser($userInputData);
     }
 
+    public function deleteUser($request)
+    {
+        $userId = $request['user_id'];
+        return $this -> userServiceInterface -> deleteUser($userId);
+    }
+
 }

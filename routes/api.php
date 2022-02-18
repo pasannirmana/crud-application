@@ -26,4 +26,5 @@ Route::group([
     Route::get('/getUser', [UserController::class, 'getUser']);
     Route::post('/getUserById', [UserController::class, 'getUserById']);
     Route::post('/updateUser', [UserController::class, 'updateUser']);
+    Route::post('/deleteUser', [UserController::class, 'deleteUser']);
 });

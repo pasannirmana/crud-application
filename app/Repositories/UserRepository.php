@@ -61,4 +61,16 @@ class UserRepository implements UserServiceInterface
         }
 
     }
+
+    public function deleteUser($userId)
+    {
+        try {
+            $isDeleted = User::destroy($userId);
+            if ($isDeleted == true){
+                return "Your entry deleted successfully";
+            }
+        }catch(\Exception $e){
+            return $e->getMessage();
+        }
+    }
 }
